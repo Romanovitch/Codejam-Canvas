@@ -7,7 +7,153 @@
 	<link rel="stylesheet" href="style.css">
 	<title>codejam-canvas</title>
 </head>
-<body>
-    
+<body class="wrap_main">
+	<!-- <div class="main_window"> -->
+
+		<header class="header">
+			<div class="wrap_local">
+
+				<nav class="main_nav">
+					<div class="btn menu">
+						<a href="javascript:void(0);" class="btn--link menu--link">
+							<span class="btn--name"></span>
+						</a>
+					</div>
+				</nav>
+
+				<h1 class="title">
+					<span class="title--name">
+						CodeJam - Pallete
+					</span>
+				</h1>
+
+			</div>
+			<div class="btn settings">
+				<a href="javascript:void(0);" class="btn--link settings--link">
+					<span class="btn--name"></span>
+				</a>
+			</div>
+
+		</header>
+
+
+		<main class="content">
+
+				<div class="pallet content--pallet">
+
+					<div class="tools content--pallet-tools ">
+						
+						<ul class="list tools--list">
+							<li class="item tools--item">
+								<button id="paint_bucket" class="item--btn tools--paint_bucket">
+									<img class="item--icon tools--icon" src="assets/paint_bucket.svg" alt="Paint bucket">
+									<span class="item--name tools--name">Paint bucket</span>
+								</buttonid>
+							</li>
+							<li class="item tools--item">
+								<button id="color_picker" class="item--btn tools--color_picker">
+									<img class="item--icon tools--icon" src="assets/color_picker.svg" alt="Choose color">
+									<span class="item--name tools--name">Choose color</span>
+								</button>
+							</li>
+							<li class="item tools--item">
+								<button id="move" class="item--btn tools--move">
+									<img class="item--icon tools--icon" src="assets/move.svg" alt="Move">
+									<span class="item--name tools--name">Move</span>
+								</button>
+							</li>
+							<li class="item tools--item">
+								<button id="transform" class="item--btn tools--transform">
+									<img class="item--icon tools--icon" src="assets/transform.svg" alt="Transform">
+									<span class="item--name tools--name">Transform</span>
+								</button>
+							</li>
+						</ul>
+
+					</div>
+
+					<div class="color content--pallet-color">
+						<ul class="list color--list">
+
+							<li class="item color--item">
+								<button id="colorCurrent" class="item--btn color--current_color">
+									<span class="item--icon color--icon"></span>
+									<span class="item--name color--name">Current color</span>
+								</buttonid>
+							</li>
+
+							<li class="item color--item">
+								<button id="colorPrev" class="item--btn color--prev">
+									<span class="item--icon color--icon"></span>
+									<span class="item--name color--name">Prev color</span>
+								</button>
+							</li>
+
+							<li class="item color--item">
+								<button id="colorRed" class="item--btn color--red">
+									<span class="item--icon color--icon"></span>
+									<span class="item--name color--name">red</span>
+								</button>
+							</li>
+
+							<li class="item color--item">
+								<button id="colorBlue" class="item--btn color--blue">
+									<span class="item--icon color--icon"></span>
+									<span class="item--name color--name">blue</span>
+								</button>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="content--canvas">
+					<canvas id="canvas" class="canvas" width="512" height="512">
+					</canvas>
+					<img class="hidden" id="img_canvas" src="data/image.png" width="512" height="512">
+				</div>
+
+				<div class="data content--data">
+					<ul class="list data--list">
+
+						<li class="item data--item data--item-4x4">
+							<input type="radio" name="dataSwitch" value="4x4" id="dataSwitch_4x4">
+							<label class="item--btn" for="dataSwitch_4x4">
+								<span class="item--icon data--icon"></span>
+								<span class="item--name data--name">4 x 4</span>
+							</label>
+						</li>
+
+						<li class="item data--item data--item-32x32">
+							<input type="radio" name="dataSwitch" value="32x32" id="dataSwitch_32x32">
+							<label class="item--btn" for="dataSwitch_32x32">
+								<span class="item--icon data--icon"></span>
+								<span class="item--name data--name">32 x 32</span>
+							</label>
+						</li>
+
+						<li class="item data--item data--item-256x256">
+							<input type="radio" name="dataSwitch" value="256x256" id="dataSwitch_256x256">
+							<label class="item--btn" for="dataSwitch_256x256">
+								<span class="item--icon data--icon"></span>
+								<span class="item--name data--name">256 x 256</span>
+							</label>
+						</li>
+
+					</ul>
+				</div>
+
+
+		</main>
+
+
+		<footer class="footer">
+			footer
+		</footer>
+
+	<!-- </div> -->
+	<script src="data/4x4.js"></script>
+  <script src="data/32x32.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
